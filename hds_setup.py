@@ -37,3 +37,9 @@ infinitive_transitive.data_from_file("wordlists/verbs/infinitive_transitive.txt"
 
 progressive_transitive = hds(verbs)
 progressive_transitive.data_from_file("wordlists/verbs/progressive_transitive.txt")
+
+
+
+numbers = hds(root)
+numbers.data_from_file("wordlists/numbers.txt")
+

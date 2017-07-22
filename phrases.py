@@ -11,13 +11,13 @@ insults.append(
 )
 
 insults.append(
-    insult("Yeah you {} {}, I {} your {} while riding a {}.",
-            [adjectives, rude_nouns, past_transitive, family, animals])
+    insult("Yeah you {} {}, I {} your {} while riding a {} {}.",
+            [adjectives, rude_nouns, past_transitive, family, adjectives, animals])
 )
 
 insults.append(
-    insult("I would rather {} a {} than spend another minute with you, you {} {}.",
-            [infinitive_transitive, animals, adjectives, rude_nouns])
+    insult("I would rather {} {} {}s than spend another minute with you, you {} {}.",
+            [infinitive_transitive, numbers, animals, adjectives, rude_nouns])
 )
 
 insults.append(
@@ -45,8 +45,15 @@ insults.append(
             [body_parts, abstract_nouns, adjectives])
 )
 
+insults.append(
+    insult("How do you sleep at night you {} excuse for a {} {}'s {}",
+            [adjectives, adjectives, animals, family])
+)
 
-
+insults.append(
+    insult("When you walk into a room, I can feel the stupity oozing from your {}.",
+            [body_parts])
+)
 
 
 
