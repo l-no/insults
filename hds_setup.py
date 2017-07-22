@@ -1,13 +1,14 @@
 from hds import hds
 
 
-words = hds()
+root = hds()
 
-nouns = hds(words)
+nouns = hds(root)
+exclamations = hds(root)
+
 
 animals = hds(nouns)
-with open("wordlists/animals.txt", "r") as f:
-    for animal in f:
-        animals.add_data(animal)
+animals.data_from_file("wordlists/animals.txt")
 
-
+adhominem = hds(exclamations)
+adhominem.data_from_file("wordlists/curses/adhominem.txt")

@@ -15,6 +15,10 @@ class hds:
             self.data.extend(arg)
         else:
             self.data.append(arg)
+    def data_from_file(self, fname):
+        with open(fname, "r") as f:
+            for line in f:
+                self.add_data(line)
 
     # when flag is true, currently grabs a random element from each descendant
     # and then randomly returns one of those. This means that each node has
