@@ -9,8 +9,12 @@ class hds:
         self.children.append(child)
     def add_parent(self, parent):
         self.parents.append(parent)
-    def add_data(self, element):
-        self.data.append(element)
+    # takes elements or lists
+    def add_data(self, arg):
+        if type(arg) == list:
+            self.data.extend(arg)
+        else:
+            self.data.append(arg)
 
     # when flag is true, currently grabs a random element from each descendant
     # and then randomly returns one of those. This means that each node has
@@ -39,7 +43,5 @@ class hds:
         self.parents = []
         self.children = []
         if parent != None:
-            print("Parent ", parent)
-            print("self ", self)
             self.add_parent(parent)
             parent.add_child(self)
