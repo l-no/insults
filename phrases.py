@@ -55,7 +55,10 @@ insults.append(
             [body_parts])
 )
 
-
+insults.append(
+    insult("Nothing would give me more joy than to see you succeed in society today; The problem is you're just such a {}.",
+            [rude_nouns])
+)
 
 
 
