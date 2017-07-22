@@ -1,6 +1,3 @@
-accursed
-bally
-blamed
 blankety-blank
 blasted
 bleeding
@@ -10,11 +7,9 @@ blinking
 bloody
 blooming
 confounded
-consarned
 crappy
 cruddy
 cursed
-daggoned
 damned
 deuced
 dratted
@@ -23,13 +18,11 @@ fecking
 flaming
 flipping
 freaking
-frelling
 fucked up
 fucking
 goddamn
 goddamned
 goldarn
-infernal
 motherfucking
 rotten
 ruddy

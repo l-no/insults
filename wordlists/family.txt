@@ -1,0 +1,24 @@
+father
+mother
+brother
+sister
+aunt
+uncle
+cousin
+son
+daughter
+niece
+nephew
+mom
+dad
+grandmother
+grandfather
+grandpa
+grandma
+best friend's hot mom
+best friend's hot dad
+best friend's hot sister
+best friend's hot dad
+best friend's hot grandma
+best friend's hot grandpa
+adopted replacement
