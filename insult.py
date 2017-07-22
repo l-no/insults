@@ -8,4 +8,3 @@ class insult:
     def __init__(self, phrase, categories = None):
         self.phrase = phrase
         self.categories = categories
-

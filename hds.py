@@ -33,12 +33,10 @@ class hds:
                 possibilities.append(s)
             for child in self.children:
                 recursed_possibilities = child.random(True)
-                print("rp ", recursed_possibilities)
                 if recursed_possibilities != None:
                     possibilities.extend(recursed_possibilities)
 
             if hds.recursion_depth == 1:
-                print("p ",possibilities)
                 hds.recursion_depth = 0
                 if possibilities == None or len(possibilities) == 0:
                     return None

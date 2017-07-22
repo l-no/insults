@@ -58,7 +58,7 @@ def test_five():
     flag = False
     for i in range(1000):
         if x.random(True) == 'd':
-            flag = True # really unlikely that this never happens
+            flag = True # really unlikely that this doesn't happens
     assert(flag == True)
 
 def test_six():
@@ -71,7 +71,7 @@ def test_six():
     flag = False
     for i in range(1000):
         if x.random(True) == 'd':
-            flag = True # really unlikely that this never happens
+            flag = True # really unlikely that this doesn't happens
     assert(flag == True)
 
 
