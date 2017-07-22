@@ -27,19 +27,24 @@ class hds:
             return self.data[int(random() * len(self.data))].lower()
         else:
             hds.recursion_depth += 1
-            possibilities = [self.random()]
+            possibilities = []
+            s = self.random()
+            if (s != None):
+                possibilities.append(s)
             for child in self.children:
                 recursed_possibilities = child.random(True)
+                print("rp ", recursed_possibilities)
                 if recursed_possibilities != None:
                     possibilities.extend(recursed_possibilities)
 
             if hds.recursion_depth == 1:
+                print("p ",possibilities)
                 hds.recursion_depth = 0
                 if possibilities == None or len(possibilities) == 0:
                     return None
                 ret = possibilities[int(random() * len(possibilities))]
                 if ret == None:
-                    return ret
+                    return None
                 else:
                     return ret.lower()
 

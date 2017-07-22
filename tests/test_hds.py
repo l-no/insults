@@ -27,7 +27,9 @@ def test_four():
     y = hds(x)
     y.add_data('a')
     assert(x.random() == None)
+    assert(y.random() == 'a')
     assert(x.random(True) == 'a')
+    assert(y.random(True) == 'a')
 
 def test_five():
     x = hds()
@@ -43,13 +45,11 @@ def test_five():
     assert(x.random() == None)
     assert(y.random() == None)
     assert(z.random() == 'a')
-
     assert(x.random(True) == 'a')
     assert(y.random(True) == 'a')
     assert(z.random(True) == 'a')
 
-"""
-def test_four():
+def test_five():
     x = hds()
     x.add_data('a')
     y = hds(x)
@@ -61,7 +61,7 @@ def test_four():
             flag = True # really unlikely that this never happens
     assert(flag == True)
 
-def test_five():
+def test_six():
     x = hds()
     x.add_data('a')
     y = hds(x)
@@ -73,4 +73,9 @@ def test_five():
         if x.random(True) == 'd':
             flag = True # really unlikely that this never happens
     assert(flag == True)
-"""
+
+
+
+
+
+
