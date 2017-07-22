@@ -28,7 +28,7 @@ class hds:
         if include_descendants_in_search == False or len(self.children) == 0:
             if len(self.data) == 0:
                 return None
-            return self.data[int(random() * len(self.data))].lower()
+            return self.data[int(random() * len(self.data))].lower().strip()
         else:
             hds.recursion_depth += 1
             possibilities = []
@@ -48,7 +48,7 @@ class hds:
                 if ret == None:
                     return None
                 else:
-                    return ret.lower()
+                    return ret.lower().strip()
 
             hds.recursion_depth -= 1
             return possibilities
