@@ -12,6 +12,10 @@ class hds:
     def add_data(self, element):
         self.data.append(element)
 
+    # when flag is true, currently grabs a random element from each descendant
+    # and then randomly returns one of those. This means that each node has
+    # equivalent probability of being chosen rather than each individual
+    # element having equal probability FIXME
     def random(self, include_descendants_in_search = False):
         if include_descendants_in_search == False or len(self.children) == 0:
             if len(self.data) == 0:
