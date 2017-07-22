@@ -31,13 +31,17 @@ class hds:
             for child in self.children:
                 recursed_possibilities = child.random(True)
                 if recursed_possibilities != None:
-                    possibilities.append(child.random(True))
+                    possibilities.extend(recursed_possibilities)
 
             if hds.recursion_depth == 1:
                 hds.recursion_depth = 0
-                if len(possibilities) == 0:
+                if possibilities == None or len(possibilities) == 0:
                     return None
-                return possibilities[int(random() * len(possibilities))].lower()
+                ret = possibilities[int(random() * len(possibilities))]
+                if ret == None:
+                    return ret
+                else:
+                    return ret.lower()
 
             hds.recursion_depth -= 1
             return possibilities
