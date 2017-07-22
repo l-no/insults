@@ -6,7 +6,7 @@ p1 = insult("{}! Why haven't you taken a shower yet you {} {}!?\n",
             [adhominem, adjectives, animals])
 
 p2 = insult("Yeah, you {} {}, I {} your mother while riding a {}.\n",
-            [adjectives, adhominem, past_transitive, animals])
+            [adjectives, rude_nouns, past_transitive, animals])
 
 
 

@@ -13,6 +13,9 @@ adjectives.data_from_file("wordlists/curses/adjectives.txt")
 animals = hds(nouns)
 animals.data_from_file("wordlists/animals.txt")
 
+rude_nouns = hds(nouns)
+rude_nouns.data_from_file("wordlists/misc/bad-nouns.txt")
+
 adhominem = hds(exclamations)
 adhominem.data_from_file("wordlists/curses/adhominem.txt")
 
