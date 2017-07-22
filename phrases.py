@@ -5,23 +5,35 @@ from random import random
 
 insults = []
 
-p1 = insult("{}! Why haven't you taken a shower yet you {} {}!?",
+insults.append(
+    insult("{}! Why haven't you taken a shower yet you {} {}!?",
             [adhominem, adjectives, animals])
-insults.append(p1)
+)
 
-p2 = insult("Yeah, you {} {}, I {} your mother while riding a {}.",
+insults.append(
+    insult("Yeah, you {} {}, I {} your mother while riding a {}.",
             [adjectives, rude_nouns, past_transitive, animals])
-insults.append(p1)
+)
 
-p3 = insult("I would rather {} a {} than spend another minute with you, you {} {}",
+insults.append(
+    insult("I would rather {} a {} than spend another minute with you, you {} {}",
             [infinitive_transitive, animals, adjectives, rude_nouns])
-insults.append(p3)
+)
 
-
-p4 = insult("Holy {}! You are the sinlge most {} piece of {} that I have ever seen",
+insults.append(
+    insult("Holy {}! You are the single most {} piece of {} that I have ever seen.",
             [rude_nouns, adjectives, rude_nouns])
-insults.append(p4)
+)
 
+insults.append(
+    insult("Honestly, just fuck off.",
+            [])
+)
+
+insults.append(
+    insult("How many times do I need to tell you to stop {} {}s, you {} {}.",
+           [progressive_transitive, animals, adjectives, rude_nouns])
+)
 
 
 

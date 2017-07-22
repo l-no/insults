@@ -24,3 +24,6 @@ past_transitive.data_from_file("wordlists/verbs/past_transitive.txt")
 
 infinitive_transitive = hds(verbs)
 infinitive_transitive.data_from_file("wordlists/verbs/infinitive_transitive.txt")
+
+progressive_transitive = hds(verbs)
+progressive_transitive.data_from_file("wordlists/verbs/progressive_transitive.txt")
