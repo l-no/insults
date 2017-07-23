@@ -1,0 +1,14 @@
+This is still todo.
+
+*Warning* The insults are nsfw
+
+Get a random insult with `python3 phrases.py`
+
+
+TODO:
+
+    - Readme
+    - split insults into sfw and nsfw
+    - more phrases
+    - more word lists
+    - add setup.py for pip installation
