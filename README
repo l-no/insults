@@ -13,3 +13,7 @@ TODO:
     - more phrases
     - more word lists
     - add setup.py for pip installation
+
+
+Note: to run the hds tests, you need the pytest module
+`pip3 install pytest`
