@@ -60,6 +60,12 @@ insults.append(
             [rude_nouns])
 )
 
+insults.append(
+    insult("Doth my own eyes decieve me, wherefore art thou you {} {}?",
+            [adjectives, rude_nouns])
+)
+
+
 
 
 
