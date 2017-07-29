@@ -3,6 +3,7 @@ from random import random
 # Hierarchical data structure
 class hds:
 
+    # TODO do we actually need to use this static variable?
     recursive_index = 0
 
     def add_child(self, child):
@@ -32,18 +33,27 @@ class hds:
                 if type(r) == str:
                     return r
 
+    # get the total number of elements in a node and all its children
+    def get_total_elements_recursive(self):
+        sum = len(self.data)
+        for child in self.children:
+            sum += child.get_total_elements_recursive()
+        return sum
+
     def random(self, include_descendants_in_search = False):
         if include_descendants_in_search == False or len(self.children) == 0:
             if len(self.data) == 0:
                 return None
             return self.data[int(random() * len(self.data))].lower().strip()
         else: # recursive case
-            # Go down the tree, appending the lens of each array
-            self.recursion_array.append(len(self.data))
-            for child in self.children:
-                child.random(True)
-
-
+            hds.recursive_index = 0
+            tot = self.get_total_elements_recursive()
+            rand = int(random() * tot)
+            ret = self.get_ith_recursive(rand)
+            if ret == None:
+                return ret
+            else:
+                return ret.lower()
 
     def __init__(self, parent = None):
         self.data = []

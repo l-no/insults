@@ -1,7 +1,5 @@
 from hds import hds
 
-
-
 def test_ith_recursive():
     x = hds()
     x.data = ['a', 'b', 'c', 'd', 'e', 'f']
@@ -13,7 +11,6 @@ def test_ith_recursive():
     for i in range(13):
         r = x.get_ith_recursive(i)
         assert(r == chr(i + ord('a')))
-
 
     w = hds(y)
     w.data = ['0', '1', '2']
@@ -30,6 +27,20 @@ def test_ith_recursive():
            == w.get_ith_recursive(2)
            == '2')
 
+def test_total_elements_recursive():
+    x = hds()
+    x.data = ['a', 'b', 'c', 'd', 'e', 'f']
+    y = hds(x)
+    y.data = ['g', 'h', 'i', 'j', 'k', 'l']
+    z = hds(x)
+    z.data = ['m', 'n']
+    w = hds(y)
+    w.data = ['o', 'p']
+
+    assert(z.get_total_elements_recursive() == 2)
+    assert(w.get_total_elements_recursive() == 2)
+    assert(y.get_total_elements_recursive() == 8)
+    assert(x.get_total_elements_recursive() == 16)
 
 
 
@@ -40,10 +51,6 @@ def test_one():
     assert(len(y.parents) == 1)
     assert(len(x.children) == 1)
 
-
-
-
-"""
 def test_two():
     x = hds()
     y = hds(x)
@@ -51,6 +58,7 @@ def test_two():
     x.add_data('A')
     assert(x.random() == 'a')
     assert(x.random(True) == 'a')
+
 def test_three():
     x = hds()
     x.add_data(['a', 'b', 'c'])
@@ -109,9 +117,7 @@ def test_six():
         if x.random(True) == 'd':
             flag = True # really unlikely that this doesn't happens
     assert(flag == True)
-"""
 
-
-
+# TODO more tests? tests 5 and 6 are more focused on the old hds system
 
 
