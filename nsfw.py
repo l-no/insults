@@ -1,9 +1,13 @@
+from hds import hds
+from root import root
 from hds_setup import *
 from insult import *
 from random import random
 
 
-insults = []
+nsfw = hds(root)
+
+insults = nsfw.data
 
 insults.append(
     insult("You smell like {} {}s; Why haven't you taken a shower yet you {}!?",
@@ -66,12 +70,6 @@ insults.append(
 )
 
 
-
-
-
-def random_phrase():
-    r = int(random() * len(insults))
-    print(insults[r].fill())
-
 if __name__ == "__main__":
-   random_phrase()
+   #random_phrase()
+    print(nsfw.random().fill())

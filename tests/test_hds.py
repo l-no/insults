@@ -55,7 +55,7 @@ def test_two():
     x = hds()
     y = hds(x)
 
-    x.add_data('A')
+    x.add_data('a')
     assert(x.random() == 'a')
     assert(x.random(True) == 'a')
 

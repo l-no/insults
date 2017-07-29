@@ -44,7 +44,11 @@ class hds:
         if include_descendants_in_search == False or len(self.children) == 0:
             if len(self.data) == 0:
                 return None
-            return self.data[int(random() * len(self.data))].lower().strip()
+            ret = self.data[int(random() * len(self.data))]
+            if type(ret) == str:
+                return self.data[int(random() * len(self.data))].lower().strip()
+            else:
+                return ret
         else: # recursive case
             hds.recursive_index = 0
             tot = self.get_total_elements_recursive()
@@ -52,8 +56,10 @@ class hds:
             ret = self.get_ith_recursive(rand)
             if ret == None:
                 return ret
-            else:
+            elif type(ret) == str:
                 return ret.lower()
+            else:
+                return ret
 
     def __init__(self, parent = None):
         self.data = []
