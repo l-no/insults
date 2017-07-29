@@ -1,5 +1,38 @@
 from hds import hds
 
+
+
+def test_ith_recursive():
+    x = hds()
+    x.data = ['a', 'b', 'c', 'd', 'e', 'f']
+    y = hds(x)
+    y.data = ['g', 'h', 'i', 'j', 'k', 'l']
+    z = hds(x)
+    z.data = ['m', 'n']
+
+    for i in range(13):
+        r = x.get_ith_recursive(i)
+        assert(r == chr(i + ord('a')))
+
+
+    w = hds(y)
+    w.data = ['0', '1', '2']
+    assert(   x.get_ith_recursive(12)
+           == y.get_ith_recursive(6)
+           == w.get_ith_recursive(0)
+           == '0')
+    assert(   x.get_ith_recursive(13)
+           == y.get_ith_recursive(7)
+           == w.get_ith_recursive(1)
+           == '1')
+    assert(   x.get_ith_recursive(14)
+           == y.get_ith_recursive(8)
+           == w.get_ith_recursive(2)
+           == '2')
+
+
+
+
 def test_one():
     x = hds()
     assert(len(x.children) == 0)
@@ -7,6 +40,10 @@ def test_one():
     assert(len(y.parents) == 1)
     assert(len(x.children) == 1)
 
+
+
+
+"""
 def test_two():
     x = hds()
     y = hds(x)
@@ -14,7 +51,6 @@ def test_two():
     x.add_data('A')
     assert(x.random() == 'a')
     assert(x.random(True) == 'a')
-
 def test_three():
     x = hds()
     x.add_data(['a', 'b', 'c'])
@@ -73,7 +109,7 @@ def test_six():
         if x.random(True) == 'd':
             flag = True # really unlikely that this doesn't happens
     assert(flag == True)
-
+"""
 
 
 
